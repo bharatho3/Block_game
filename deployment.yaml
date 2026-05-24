@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Block_game-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: Block_game
+
+  template:
+    metadata:
+      labels:
+        app: Block_game
+
+    spec:
+      containers:
+      - name: Block_game
+
+        image: bharathgowdao3/Block_game:v1
+
+        ports:
+        - containerPort: 80
