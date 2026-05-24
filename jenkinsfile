@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "YOUR_DOCKERHUB_USERNAME/block-game:v1"
+        DOCKER_IMAGE = "bharathgowdao3/Block_game:v1"
     }
 
     stages {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/block-game.git'
+                git 'https://github.com/bharatho3/Block_game.git'
             }
         }
 
